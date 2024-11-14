@@ -20,9 +20,17 @@ public class Utils {
 		return (Stage) ((Node) event.getSource()).getScene().getWindow();
 	} // receber o stage para onde o controle que recebeu o evento está
 
-	public static Integer tryParseToINt(String str) {
+	public static Integer tryParseToInt(String str) {
 		try {
 			return Integer.parseInt(str);
+		} catch (NumberFormatException e) {
+			return null;
+		}
+	}
+	
+	public static Double tryParseToDouble(String str) {
+		try {
+			return Double.parseDouble(str);
 		} catch (NumberFormatException e) {
 			return null;
 		}
