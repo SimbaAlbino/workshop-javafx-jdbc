@@ -9,4 +9,13 @@ public class Utils {
 	public static Stage currentStage(ActionEvent event) {
 		return (Stage) ((Node) event.getSource()).getScene().getWindow();
 	} //receber o stage para onde o controle que recebeu o evento está
+	
+	public static Integer tryParseToINt(String str) {
+		try {
+			return Integer.parseInt(str);
+		} catch (NumberFormatException e) {
+			return null;
+		}
+	}
 }
+
